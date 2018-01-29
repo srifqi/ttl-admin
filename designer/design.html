@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+	<head>
+		<title>Pendesain Pos Soal TTL Indonesia</title>
+		<meta charset="UTF-8">
+		<meta name="author" content="Muhammad Rifqi Priyo Susanto">
+		<meta name="description" content="Pendesain Pos Soal Team Tanpa Les (TTL) Indonesia">
+		<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+		<meta name="robots" content="noindex,nofollow,noarchive,nocache">
+		<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	showProcessingMessages: false,
+	tex2jax: { inlineMath: [['\\(','\\)']] }
+});
+		</script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_SVG" async onload="initMathJax()"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700" async>
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+	<body>
+		<div id="toolbar">
+			<h1 id="title">Pendesain Pos Soal TTL Indonesia</h1>
+			<div style="min-width:50px;"></div>
+			<span id="loadingmsg">Sedang memuat...</span>
+		</div>
+		<div id="editmode" class="container">
+			<div id="greenmarker" style="background:transparent;"></div>
+			<div id="canvas">
+				<div id="cheader">
+					<big id="cname">Campuran</big>
+					<div id="chleft">
+						<div id="ctype">SOAL</div>
+						<div id="cdate">--/--/----</div>
+					</div>
+				</div>
+				<div id="ccontent">
+					<div id="cid">Naskah Soal Nomor 1</div>
+					<div id="ctextbuffer" style="visibility:hidden;position:absolute;top:0;left:0;"></div>
+					<div id="ctext">Nilai dari x adalah .... (aturan penulisan HTML dan LaTeX didukung)</div>
+				</div>
+			</div>
+		</div>
+		<div id="cutmode" class="container" style="display:none;">
+			<canvas id="cuttingcanvas" width=512 height=512 style="width:512px;height:512px;">Peramban Anda tidak mendukung kanvas.</canvas>
+		</div>
+		<div id="editbar" class="sidebar">
+			<button onclick="_export1()">Ekspor</button>
+			<h2>Informasi pos</h2>
+			<div>
+				<select id="mapel" oninput="render()"></select>
+				<input id="tanggal" type="date" oninput="render()" placeholder="tttt-bb-hh" /><br>
+				<input id="jenis1" type="radio" name="jenis" onchange="render()" value="soal" checked />
+				<label for="jenis1">Soal</label>
+				<input id="jenis2" type="radio" name="jenis" onchange="render()" value="pembahasan" />
+				<label for="jenis2">Pembahasan</label>
+			</div>
+			<h2>Naskah</h2>
+			<div>
+				<input id="judul" type="text" oninput="render()" placeholder="Naskah Soal Nomor 1" /><br>
+				<textarea id="naskah" type="text" oninput="render()" placeholder="Nilai dari x adalah .... (aturan penulisan HTML dan LaTeX didukung)"></textarea>
+			</div>
+		</div>
+		<div id="exporttext1" class="sidebar exporttext" style="display:none;">
+			<p>Tekan <kbd>PrtSc</kbd>.</p>
+		</div>
+		<div id="exporttext2" class="sidebar exporttext" style="display:none;">
+			<p>Tempel<br><kbd>Ctrl</kbd>&nbsp;+&nbsp;<kbd>V</kbd></p>
+		</div>
+		<div id="exporttext3" class="sidebar exporttext" style="display:none;">
+			<p>Klik kotak hijau untuk mengepaskan pemotongan gambar.</p>
+		</div>
+		<div id="exporttext4" class="sidebar exporttext" style="display:none;">
+			<p>Selesai!</p>
+			<p>Untuk menyimpan, klik kanan pada gambar lalu klik simpan gambar.</p>
+			<button onclick="_export5()">Tutup</button>
+		</div>
+	</body>
+</html>
+<!--
+Pendesain Pos Soal Team Tanpa Les Indonesia
+Copyright (C) 2018 Pengelola Grup Team Tanpa Les Indonesia
+Copyright (C) 2018 srifqi, Muhammad Rifqi Priyo Susanto
+		<muhammadrifqipriyosusanto@gmail.com>
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation; either version 2.1 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public License along
+with this program; if not, write to the Free Software Foundation, Inc.,
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
+Lisensi gambar kotakteks.png:
+Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+	https://creativecommons.org/licenses/by-nc-sa/4.0/
+Atribusi-NonKomersial-BerbagiSerupa 4.0 Internasional (CC BY-NC-SA 4.0)
+	https://creativecommons.org/licenses/by-nc-sa/4.0/deed.id
+-->
